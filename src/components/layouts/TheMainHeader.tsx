@@ -67,7 +67,7 @@ const TheMainHeader = () => {
           xs: 1,
           md: 1.5,
         },
-        background: "#141416",
+        background: theme => theme.palette.background.paper,
       }}
     >
       <Container>
