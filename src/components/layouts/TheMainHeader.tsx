@@ -1,35 +1,48 @@
 "use client";
 
-import { Menu } from "@mui/icons-material";
 import {
   Avatar,
   Box,
   Container,
+  Divider,
+  IconButton,
+  ListItemIcon,
   ListItemText,
   MenuItem,
   MenuList,
   Stack,
 } from "@mui/material";
+import Hamburger from "hamburger-react";
 import NextLink from "next/link";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
+import {
+  CurrencyExchange,
+  Insights,
+  SwapHoriz,
+  Wallet,
+} from "@mui/icons-material";
 
 const menuItems = [
   {
     href: "/",
     label: "Wallet",
+    icon: Wallet,
   },
   {
     href: "/",
     label: "Exchange",
+    icon: Insights,
   },
   {
     href: "/",
     label: "Quick Swap",
+    icon: SwapHoriz,
   },
   {
     href: "/",
     label: "Fees",
+    icon: CurrencyExchange,
   },
 ];
 
@@ -50,14 +63,24 @@ const TheMainHeader = () => {
     >
       {menuItems.map((item, index) => {
         return (
-          <MenuItem
-            key={index}
-            component={NextLink}
-            href={item.href}
-            onClick={handleMobileMenuToggle}
-          >
-            <ListItemText primary={item.label} />
-          </MenuItem>
+          <>
+            <MenuItem
+              key={index}
+              sx={{ px: 3 }}
+              component={NextLink}
+              href={item.href}
+              onClick={handleMobileMenuToggle}
+            >
+              <ListItemIcon>
+                <item.icon />
+              </ListItemIcon>
+              <ListItemText primary={item.label} />
+            </MenuItem>
+            <Divider
+              sx={{ mt: "4px !important", mb: "4px !important" }}
+              flexItem
+            />
+          </>
         );
       })}
     </MenuList>
@@ -103,7 +126,9 @@ const TheMainHeader = () => {
               alignItems: "center",
             }}
           >
-            <Menu sx={{ color: "#fff" }} onClick={handleMobileMenuToggle} />
+            <IconButton onClick={handleMobileMenuToggle}>
+              <Hamburger toggled={isMobileMenu} size={24} />
+            </IconButton>
             <MobileMenu
               menuContent={menuContent}
               isOpen={isMobileMenu}
@@ -124,11 +149,15 @@ const TheMainHeader = () => {
               {menuItems.map((menuItem) => {
                 return (
                   <MenuItem
+                    dense
                     key={menuItem.href}
                     component={NextLink}
                     href={menuItem.href}
                   >
-                    {menuItem.label}
+                    <ListItemIcon sx={{ minWidth: "30px !important" }}>
+                      <menuItem.icon />
+                    </ListItemIcon>
+                    <ListItemText>{menuItem.label}</ListItemText>
                   </MenuItem>
                 );
               })}

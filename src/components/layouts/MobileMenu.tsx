@@ -29,6 +29,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
       PaperProps={{
         variant: 'outlined',
         sx: {
+          border: 'none',
           background: "background.default",
           boxSizing: "border-box",
           width: "100%",
