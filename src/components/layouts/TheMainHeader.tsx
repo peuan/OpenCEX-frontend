@@ -5,24 +5,31 @@ import {
   Avatar,
   Box,
   Container,
-  Link,
-  List,
-  ListItem,
   ListItemText,
+  MenuItem,
+  MenuList,
   Stack,
 } from "@mui/material";
-import { useState } from "react";
 import NextLink from "next/link";
+import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 
 const menuItems = [
   {
     href: "/",
-    label: "หน้าหลัก",
+    label: "Wallet",
   },
   {
-    href: "/about",
-    label: "เกี่ยวกับเรา",
+    href: "/",
+    label: "Exchange",
+  },
+  {
+    href: "/",
+    label: "Quick Swap",
+  },
+  {
+    href: "/",
+    label: "Fees",
   },
 ];
 
@@ -34,7 +41,7 @@ const TheMainHeader = () => {
   };
 
   const menuContent = (
-    <List
+    <MenuList
       sx={{
         "& a": {
           textDecoration: "unset",
@@ -43,16 +50,17 @@ const TheMainHeader = () => {
     >
       {menuItems.map((item, index) => {
         return (
-          <>
-            <Link key={index} component={NextLink} href={item.href} passHref>
-              <ListItem onClick={handleMobileMenuToggle}>
-                <ListItemText primary={item.label} />
-              </ListItem>
-            </Link>
-          </>
+          <MenuItem
+            key={index}
+            component={NextLink}
+            href={item.href}
+            onClick={handleMobileMenuToggle}
+          >
+            <ListItemText primary={item.label} />
+          </MenuItem>
         );
       })}
-    </List>
+    </MenuList>
   );
 
   return (
@@ -67,7 +75,7 @@ const TheMainHeader = () => {
           xs: 1,
           md: 1.5,
         },
-        background: theme => theme.palette.background.paper,
+        background: (theme) => theme.palette.background.paper,
       }}
     >
       <Container>
@@ -77,6 +85,15 @@ const TheMainHeader = () => {
           alignItems="center"
           gap={2}
         >
+          <Stack alignItems="center">
+            <NextLink href="/">
+              <Avatar
+                sx={{ width: 180, height: 50 }}
+                variant="square"
+                src="/logo.svg"
+              />
+            </NextLink>
+          </Stack>
           <Stack
             sx={{
               display: {
@@ -93,23 +110,29 @@ const TheMainHeader = () => {
               onDrawerToggle={handleMobileMenuToggle}
             />
           </Stack>
-          <Stack alignItems="center">
-            <NextLink href="/">
-              <Avatar sx={{ width: 50, height: 50 }} src="/logo.png" />
-            </NextLink>
-          </Stack>
-          <Stack direction="row" gap={1}>
-            {menuItems.map((menuItem) => {
-              return (
-                <Link
-                  key={menuItem.href}
-                  component={NextLink}
-                  href={menuItem.href}
-                >
-                  {menuItem.label}
-                </Link>
-              );
-            })}
+          <Stack
+            sx={{
+              display: {
+                xs: "none",
+                md: "flex",
+              },
+            }}
+            direction="row"
+            gap={1}
+          >
+            <MenuList sx={{ display: "flex", flexDirection: "row" }}>
+              {menuItems.map((menuItem) => {
+                return (
+                  <MenuItem
+                    key={menuItem.href}
+                    component={NextLink}
+                    href={menuItem.href}
+                  >
+                    {menuItem.label}
+                  </MenuItem>
+                );
+              })}
+            </MenuList>
           </Stack>
         </Stack>
       </Container>
