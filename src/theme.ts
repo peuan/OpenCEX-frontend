@@ -1,5 +1,5 @@
-"use client";
-import { createTheme } from "@mui/material/styles";
+"use client"
+import { createTheme } from "@mui/material/styles"
 
 const theme = createTheme({
   palette: {
@@ -9,12 +9,12 @@ const theme = createTheme({
     },
     background: {
       default: "#18191D",
-      paper: '#141416'
+      paper: "#141416",
     },
   },
   typography: {
-    fontFamily: "var(--font-geist-mono)",
+    fontFamily: "var(--font-prompt-regular)",
   },
-});
+})
 
-export default theme;
+export default theme
