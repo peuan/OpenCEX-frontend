@@ -51,10 +51,10 @@ const Hero = () => {
             paddingBottom: "2rem",
             display: "flex",
             alignItems: "center",
+            justifyContent: { xs: "center", md: "flex-start" },
           }}
         >
-          <PaidIcon color="primary" sx={{ marginRight: "0.5rem" }} /> BTC Price:
-          65175.43 USDT
+          <PaidIcon sx={{ marginRight: "0.5rem" }} /> BTC Price: 65175.43 USDT
         </Typography>
         <Button
           variant="contained"
