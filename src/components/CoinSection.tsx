@@ -1,6 +1,7 @@
 "use client";
 import { Card, Grid2 } from "@mui/material";
 import CoinCard from "./cards/CoinCard";
+import { Paid } from "@mui/icons-material";
 
 const coins = [
   {
@@ -10,6 +11,7 @@ const coins = [
     previousPrice: 36641.2,
     percentageChange: -0.79,
     iconUrl: "/logo.svg",
+    icon: Paid,
   },
   {
     name: "Ethereum",
@@ -18,7 +20,7 @@ const coins = [
     previousPrice: 36641.2,
     percentageChange: 10.55,
     iconUrl: "/logo.svg",
-    // isHighlight: true,
+    icon: Paid,
   },
   {
     name: "Tether",
@@ -27,6 +29,7 @@ const coins = [
     previousPrice: 1.0,
     percentageChange: -0.01,
     iconUrl: "/logo.svg",
+    icon: Paid,
   },
   {
     name: "BNB",
@@ -35,6 +38,7 @@ const coins = [
     previousPrice: 36641.2,
     percentageChange: -1.24,
     iconUrl: "/logo.svg",
+    icon: Paid,
   },
 ];
 

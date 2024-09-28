@@ -1,4 +1,5 @@
 "use client";
+import { SvgIconComponent } from "@mui/icons-material";
 import {
   Box,
   Typography,
@@ -18,6 +19,7 @@ interface CoinCardProps {
   price: number;
   previousPrice: number;
   percentageChange: number;
+  icon?: SvgIconComponent;
   iconUrl: string;
 }
 
@@ -28,6 +30,7 @@ const CoinCard: React.FC<CoinCardProps> = ({
   price,
   previousPrice,
   percentageChange,
+  icon: Icon,
   iconUrl,
 }) => {
   const theme = useTheme();
@@ -48,7 +51,7 @@ const CoinCard: React.FC<CoinCardProps> = ({
     >
       <CardContent component={Stack} gap={1}>
         <Box display="flex" alignItems="center" gap={1}>
-          <Avatar src={iconUrl} alt={name} />
+          {Icon ? <Icon /> : <Avatar src={iconUrl} alt={name} />}
           <Typography variant="h6">{name}</Typography>
           <Typography variant="body2" color="textSecondary">
             {symbol}

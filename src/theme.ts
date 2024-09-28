@@ -17,6 +17,13 @@ const theme = createTheme({
   typography: {
     fontFamily: "var(--font-prompt-regular)",
   },
+  components: {
+    MuiContainer: {
+      defaultProps: {
+        maxWidth: false,
+      },
+    },
+  },
 });
 
 export default theme;
