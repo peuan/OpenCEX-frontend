@@ -1,9 +1,17 @@
+"use client"
 import { Box, Typography, Button } from "@mui/material"
 import Image from "next/image"
+import { motion } from "framer-motion"
 import PaidIcon from "@mui/icons-material/Paid"
 import Banner from "../../public/images/banner-2.png"
 
 const Hero = () => {
+  // Framer Motion animation variants
+  const imageVariants = {
+    rest: { y: 0 },
+    hover: { y: -10, transition: { duration: 0.5, yoyo: Infinity } },
+  }
+
   return (
     <Box
       sx={{
@@ -71,18 +79,22 @@ const Hero = () => {
         </Button>
       </Box>
 
+      {/* Animated Image Section */}
       <Box
+        component={motion.div} // Wrap the Box with motion
+        variants={imageVariants}
+        initial="rest"
+        whileHover="hover"
         sx={{
           position: "relative",
           width: { xs: "100%", md: "600px" },
-          height: { xs: "400px", md: "600px" },
+          height: { xs: "400px", md: "600px" }, // Explicit height and width
         }}
       >
         <Image
-          style={{ objectFit: "contain" }}
           src={Banner}
-          objectFit="cover"
-          layout="fill"
+          layout="fill" // Fill the container
+          objectFit="contain"
           alt="Crypto exchange hero graphic"
         />
       </Box>
