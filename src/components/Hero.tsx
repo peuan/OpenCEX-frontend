@@ -8,8 +8,14 @@ import Banner from "../../public/images/banner-2.png"
 const Hero = () => {
   // Framer Motion animation variants
   const imageVariants = {
-    rest: { y: 0 },
-    hover: { y: -10, transition: { duration: 0.5, yoyo: Infinity } },
+    floating: {
+      y: [0, -10, 0], // Move up and down
+      transition: {
+        duration: 3, // Time for one full cycle
+        ease: "easeInOut", // Smooth animation
+        repeat: Infinity, // Infinite loop
+      },
+    },
   }
 
   return (
@@ -83,8 +89,7 @@ const Hero = () => {
       <Box
         component={motion.div} // Wrap the Box with motion
         variants={imageVariants}
-        initial="rest"
-        whileHover="hover"
+        animate="floating" // Continuous floating effect
         sx={{
           position: "relative",
           width: { xs: "100%", md: "600px" },
