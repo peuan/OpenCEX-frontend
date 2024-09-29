@@ -14,7 +14,7 @@ import NextLink from "next/link";
 const TheMainFooter = () => {
   return (
     <Stack component="footer">
-      <Container sx={{ bgcolor: "background.paper", py: 2 }}>
+      <Container sx={{ bgcolor: "background.paper", py: 4 }}>
         <Grid2 container spacing={2}>
           <Grid2 size={{ xs: 12, md: 3.5 }}>
             <Stack gap={1}>
