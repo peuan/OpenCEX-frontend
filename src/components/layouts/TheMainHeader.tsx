@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import {
   Avatar,
@@ -11,17 +11,17 @@ import {
   MenuItem,
   MenuList,
   Stack,
-} from "@mui/material";
-import Hamburger from "hamburger-react";
-import NextLink from "next/link";
-import { useState } from "react";
-import MobileMenu from "./MobileMenu";
+} from "@mui/material"
+import Hamburger from "hamburger-react"
+import NextLink from "next/link"
+import { useState } from "react"
+import MobileMenu from "./MobileMenu"
 import {
   CurrencyExchange,
   Insights,
   SwapHoriz,
   Wallet,
-} from "@mui/icons-material";
+} from "@mui/icons-material"
 
 const menuItems = [
   {
@@ -44,14 +44,14 @@ const menuItems = [
     label: "Fees",
     icon: CurrencyExchange,
   },
-];
+]
 
 const TheMainHeader = () => {
-  const [isMobileMenu, setMobileMenuOpen] = useState(false);
+  const [isMobileMenu, setMobileMenuOpen] = useState(false)
 
   const handleMobileMenuToggle = () => {
-    setMobileMenuOpen(!isMobileMenu);
-  };
+    setMobileMenuOpen(!isMobileMenu)
+  }
 
   const menuContent = (
     <MenuList
@@ -81,16 +81,16 @@ const TheMainHeader = () => {
               flexItem
             />
           </>
-        );
+        )
       })}
     </MenuList>
-  );
+  )
 
   return (
     <Box
       component="header"
       sx={{
-        zIndex: 1,
+        zIndex: 100,
         width: "100%",
         position: "fixed",
         top: 0,
@@ -159,14 +159,14 @@ const TheMainHeader = () => {
                     </ListItemIcon>
                     <ListItemText>{menuItem.label}</ListItemText>
                   </MenuItem>
-                );
+                )
               })}
             </MenuList>
           </Stack>
         </Stack>
       </Container>
     </Box>
-  );
-};
+  )
+}
 
-export default TheMainHeader;
+export default TheMainHeader
