@@ -49,8 +49,6 @@ const ContentSection: React.FC = () => {
           spaceBetween={30}
           slidesPerView={1}
           navigation
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
           autoplay
           pagination={{ clickable: true }}
           loop={true} // Infinite looping
