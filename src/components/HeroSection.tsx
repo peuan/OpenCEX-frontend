@@ -89,6 +89,7 @@ const HeroSection = () => {
           layout="fill" // Fill the container
           objectFit="contain"
           alt="Crypto exchange hero graphic"
+          priority
         />
       </Box>
     </Box>

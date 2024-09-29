@@ -78,6 +78,7 @@ const ContentSection: React.FC = () => {
                 layout="fill" // Fill the container
                 objectFit="contain"
                 alt="Service Providers"
+                priority
               />
             </Box>
           </SwiperSlide>
@@ -97,6 +98,7 @@ const ContentSection: React.FC = () => {
                 layout="fill" // Fill the container
                 objectFit="contain"
                 alt="Service Providers"
+                priority
               />
             </Box>
           </SwiperSlide>
