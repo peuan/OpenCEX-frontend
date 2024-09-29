@@ -56,6 +56,7 @@ const ContentSection: React.FC = () => {
             maxWidth: "100%",
             width: "100%",
             position: "absolute",
+            padding: "2rem",
           }}
         >
           <SwiperSlide>
