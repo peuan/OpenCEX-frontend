@@ -13,7 +13,7 @@ const prompt = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "OpenCEX",
+  title: "PuperCEX Crypto Exchange. Buy and Sell BTC, ETH, USDT.",
   description: "PuperCEX Crypto Exchange. Buy and Sell BTC, ETH, USDT.",
 };
 
