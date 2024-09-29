@@ -44,7 +44,7 @@ const ContentSection: React.FC = () => {
           alignItems: "center",
           width: "100%",
           height: "100%",
-          py: { xs: 12, md: 0 },
+          py: { xs: 14, md: 0 },
         }}
       >
         <Swiper
@@ -108,7 +108,6 @@ const ContentSection: React.FC = () => {
       {/* Text and Button Section */}
       <Box
         component={motion.div}
-        viewport={{ amount: 0.2 }}
         {...defaultAnimate}
         sx={{
           flexBasis: { xs: "100%", md: "50%" },
