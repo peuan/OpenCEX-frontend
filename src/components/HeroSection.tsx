@@ -65,8 +65,6 @@ const HeroSection = () => {
           variant="contained"
           size="large"
           sx={{
-            backgroundColor: "primary.main",
-            borderRadius: "2rem",
             padding: { xs: "0.5rem 1.5rem", md: "0.75rem 2rem" },
             textTransform: "none",
             fontWeight: "bold",

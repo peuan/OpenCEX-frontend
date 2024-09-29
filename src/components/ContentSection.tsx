@@ -11,10 +11,15 @@ import {
 import CheckCircleIcon from "@mui/icons-material/CheckCircle"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css" // Import Swiper styles
+import "swiper/css/navigation"
+import "swiper/css/pagination"
 import Image from "next/image" // Next.js optimized Image component
 import React from "react"
 import Illustration from "../../public/images/Illustration.png"
 import Banner from "../../public/images/banner-03.png"
+import { motion } from "framer-motion"
+import { defaultAnimate, imageAnimate } from "~/constants/animate.constant"
+import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules"
 
 const ContentSection: React.FC = () => {
   return (
@@ -40,8 +45,14 @@ const ContentSection: React.FC = () => {
         }}
       >
         <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={30}
           slidesPerView={1}
+          navigation
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+          autoplay
+          pagination={{ clickable: true }}
           loop={true} // Infinite looping
           style={{
             maxWidth: "100%",
@@ -51,10 +62,12 @@ const ContentSection: React.FC = () => {
         >
           <SwiperSlide>
             <Box
+              component={motion.div} // Wrap the Box with motion
+              {...imageAnimate}
               sx={{
                 height: {
                   xs: "200px",
-                  md: "500px",
+                  md: "400px",
                 },
               }}
             >
@@ -68,10 +81,12 @@ const ContentSection: React.FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Box
+              component={motion.div} // Wrap the Box with motion
+              {...imageAnimate}
               sx={{
                 height: {
                   xs: "200px",
-                  md: "500px",
+                  md: "400px",
                 },
               }}
             >
@@ -88,6 +103,9 @@ const ContentSection: React.FC = () => {
 
       {/* Text and Button Section */}
       <Box
+        component={motion.div}
+        viewport={{ amount: 0.2 }}
+        {...defaultAnimate}
         sx={{
           flexBasis: { xs: "100%", md: "50%" },
           paddingLeft: { xs: "0", md: "2rem" }, // Padding for desktop view
@@ -140,8 +158,6 @@ const ContentSection: React.FC = () => {
         <Button
           variant="contained"
           sx={{
-            backgroundColor: "primary.main",
-            borderRadius: "2rem",
             padding: "0.75rem 2rem",
             textTransform: "none",
             fontWeight: "bold",
