@@ -2,6 +2,8 @@
 import { Card, Grid2 } from "@mui/material";
 import CoinCard from "./cards/CoinCard";
 import { Paid } from "@mui/icons-material";
+import { motion } from "framer-motion";
+import { defaultAnimate } from "~/constants/animate.constant";
 
 const coins = [
   {
@@ -47,14 +49,18 @@ const CoinSection: React.FC = () => {
     <Card
       variant="outlined"
       elevation={2}
-      component="section"
       sx={{
         py: 4,
         px: 2,
         background: (theme) => theme.palette.background.secondary,
       }}
     >
-      <Grid2 container spacing={2}>
+      <Grid2
+        container
+        spacing={2}
+        component={motion.section}
+        {...defaultAnimate}
+      >
         {coins.map((coin) => (
           <Grid2 key={coin.name} size={{ xs: 12, md: 3 }}>
             <CoinCard {...coin} />
