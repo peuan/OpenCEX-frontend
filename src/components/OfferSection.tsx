@@ -1,14 +1,7 @@
-"use client";
-import {
-  Avatar,
-  Box,
-  Container,
-  Grid2,
-  Stack,
-  Typography,
-} from "@mui/material";
-import { motion } from "framer-motion";
-import { defaultAnimate, imageAnimate } from "~/constants/animate.constant";
+"use client"
+import { Avatar, Box, Container, Grid2, Stack, Typography } from "@mui/material"
+import { motion } from "framer-motion"
+import { defaultAnimate, imageAnimate } from "~/constants/animate.constant"
 
 const offers = [
   {
@@ -26,11 +19,23 @@ const offers = [
     title: "24/7 Support",
     description: "Instant, friendly and always ready to help.",
   },
-];
+]
 
 const OfferSection = () => {
   return (
     <Container component="section" sx={{ py: 4 }}>
+      <Typography
+        variant="h3"
+        component={motion.div}
+        {...defaultAnimate}
+        sx={{
+          fontWeight: "bold",
+          paddingBottom: "1rem",
+          textAlign: "center",
+        }}
+      >
+        Why Choose Us
+      </Typography>
       <Grid2 container>
         {offers.map((offer) => {
           return (
@@ -58,11 +63,11 @@ const OfferSection = () => {
                 </Box>
               </Stack>
             </Grid2>
-          );
+          )
         })}
       </Grid2>
     </Container>
-  );
-};
+  )
+}
 
-export default OfferSection;
+export default OfferSection
