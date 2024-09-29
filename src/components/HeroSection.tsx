@@ -19,7 +19,7 @@ const HeroSection = () => {
         padding: { xs: "1rem", md: "2rem" },
         backgroundColor: "background.default",
         color: "text.primary",
-        minHeight: "calc(100vh - 98px)",
+        minHeight: "calc(100vh - 60px)",
       }}
     >
       <Box

@@ -42,6 +42,9 @@ const ContentSection: React.FC = () => {
           position: "relative",
           display: "flex",
           alignItems: "center",
+          width: "100%",
+          height: "100%",
+          py: { xs: 12, md: 0 },
         }}
       >
         <Swiper
