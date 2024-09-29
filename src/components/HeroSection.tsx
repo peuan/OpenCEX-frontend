@@ -4,19 +4,10 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import PaidIcon from "@mui/icons-material/Paid"
 import Banner from "../../public/images/banner-2.png"
+import { imageAnimate } from "~/constants/animate.constant"
 
-const Hero = () => {
+const HeroSection = () => {
   // Framer Motion animation variants
-  const imageVariants = {
-    floating: {
-      y: [0, -10, 0], // Move up and down
-      transition: {
-        duration: 3, // Time for one full cycle
-        ease: "easeInOut", // Smooth animation
-        repeat: Infinity, // Infinite loop
-      },
-    },
-  }
 
   return (
     <Box
@@ -88,8 +79,7 @@ const Hero = () => {
       {/* Animated Image Section */}
       <Box
         component={motion.div} // Wrap the Box with motion
-        variants={imageVariants}
-        animate="floating" // Continuous floating effect
+        {...imageAnimate}
         sx={{
           position: "relative",
           width: { xs: "100%", md: "600px" },
@@ -107,4 +97,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default HeroSection
