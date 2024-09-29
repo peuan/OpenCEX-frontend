@@ -1,4 +1,14 @@
-import { Avatar, Container, Grid2, Stack, Typography } from "@mui/material";
+"use client";
+import {
+  Avatar,
+  Box,
+  Container,
+  Grid2,
+  Stack,
+  Typography,
+} from "@mui/material";
+import { motion } from "framer-motion";
+import { defaultAnimate, imageAnimate } from "~/constants/animate.constant";
 
 const offers = [
   {
@@ -26,15 +36,26 @@ const OfferSection = () => {
           return (
             <Grid2 size={{ xs: 12, md: 4 }} key={offer.title}>
               <Stack gap={4} alignItems="center">
-                <Avatar
-                  sx={{ width: 100, height: "auto" }}
-                  variant="square"
-                  src={offer.logoUrl}
-                />
-                <Stack gap={2} alignItems="center">
+                <Box component={motion.div} {...imageAnimate}>
+                  <Avatar
+                    sx={{ width: 100, height: "auto" }}
+                    variant="square"
+                    src={offer.logoUrl}
+                  />
+                </Box>
+                <Box
+                  component={motion.div}
+                  {...defaultAnimate}
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 2,
+                    alignItems: "center",
+                  }}
+                >
                   <Typography variant="h4">{offer.title}</Typography>
                   <Typography>{offer.description}</Typography>
-                </Stack>
+                </Box>
               </Stack>
             </Grid2>
           );
