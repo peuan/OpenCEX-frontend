@@ -85,7 +85,7 @@ const TheMainFooter = () => {
         sx={{ display: "flex", justifyContent: "space-between", gap: 2, py: 2 }}
       >
         <Typography color="text.secondary">
-          Copyright © 2022 Themesflat
+          Copyright © 2024 OpenCEX
         </Typography>
         <Stack direction="row" gap={1} sx={{ color: "text.secondary" }}>
           <Facebook />
