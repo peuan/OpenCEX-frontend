@@ -48,6 +48,7 @@ const CoinCard: React.FC<CoinCardProps> = ({
           background: theme.palette.background.light,
         },
       }}
+      elevation={0}
     >
       <CardContent component={Stack} gap={1}>
         <Box display="flex" alignItems="center" gap={1}>

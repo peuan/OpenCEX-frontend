@@ -1,4 +1,4 @@
-import { Box, Container, Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { PropsWithChildren } from "react";
 import TheMainHeader from "./TheMainHeader";
 import TheMainFooter from "./TheMainFooter";
@@ -18,9 +18,7 @@ const TheMainLayout = ({ children }: PropsWithChildren) => {
       >
         {children}
       </Box>
-      <Container>
-        <TheMainFooter />
-      </Container>
+      <TheMainFooter />
     </Stack>
   );
 };

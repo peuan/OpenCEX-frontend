@@ -13,6 +13,9 @@ const theme = createTheme({
       secondary: "#17191D",
       light: "#23262F",
     },
+    text: {
+      secondary: "#B0B4C2",
+    },
   },
   typography: {
     fontFamily: "var(--font-prompt-regular)",
@@ -21,6 +24,16 @@ const theme = createTheme({
     MuiContainer: {
       defaultProps: {
         maxWidth: false,
+      },
+    },
+    MuiLink: {
+      defaultProps: {
+        underline: "hover",
+      },
+      styleOverrides: {
+        root: {
+          color: "#fff",
+        },
       },
     },
   },
