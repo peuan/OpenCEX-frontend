@@ -24,18 +24,18 @@ const offers = [
 const OfferSection = () => {
   return (
     <Container component="section" sx={{ py: 4 }}>
-      <Typography
-        variant="h3"
-        component={motion.div}
-        {...defaultAnimate}
-        sx={{
-          fontWeight: "bold",
-          paddingBottom: "1rem",
-          textAlign: "center",
-        }}
-      >
-        Why Choose Us
-      </Typography>
+      <Box component={motion.div} {...defaultAnimate}>
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: "bold",
+            paddingBottom: "1rem",
+            textAlign: "center",
+          }}
+        >
+          Why Choose Us
+        </Typography>
+      </Box>
       <Grid2 container>
         {offers.map((offer) => {
           return (
