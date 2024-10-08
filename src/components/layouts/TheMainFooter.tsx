@@ -68,7 +68,7 @@ const TheMainFooter = () => {
           <Grid2 size={{ xs: 12, md: 3.5 }}>
             <Stack gap={1}>
               <Typography variant="h6">
-                Trade on the go with PuperCEX
+                Trade on the go with MVP EX
               </Typography>
               <Typography color="text.secondary">
                 Get 24/7 chat support with our friendly customer agents at your
