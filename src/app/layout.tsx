@@ -13,8 +13,8 @@ const prompt = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "PuperCEX Crypto Exchange. Buy and Sell BTC, ETH, USDT.",
-  description: "PuperCEX Crypto Exchange. Buy and Sell BTC, ETH, USDT.",
+  title: "MVP EX. Buy and Sell MVPX.",
+  description: "MVP EX. Buy and Sell MVPX.",
 };
 
 export default function RootLayout({
