@@ -20,7 +20,7 @@ const TheMainFooter = () => {
             <Stack gap={1}>
               <Link component={NextLink} href="/">
                 <Avatar
-                  sx={{ width: 180, height: 50 }}
+                  sx={{ width: 180, height: 40 }}
                   variant="square"
                   src="/logo.svg"
                 />
@@ -30,7 +30,7 @@ const TheMainFooter = () => {
               </Typography>
               <Typography color="text.secondary">+12 345 678 9101</Typography>
               <Typography color="text.secondary">
-                Info.Avitex@Gmail.Com
+                Support@mvp-ex.com
               </Typography>
               <Typography color="text.secondary">
                 Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522
@@ -85,7 +85,7 @@ const TheMainFooter = () => {
         sx={{ display: "flex", justifyContent: "space-between", gap: 2, py: 2 }}
       >
         <Typography color="text.secondary">
-          Copyright © 2024 OpenCEX
+          Copyright © 2024 MVP EX
         </Typography>
         <Stack direction="row" gap={1} sx={{ color: "text.secondary" }}>
           <Facebook />

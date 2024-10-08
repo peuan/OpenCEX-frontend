@@ -10,7 +10,7 @@ const CoinPriceSection = () => {
       <Box component={motion.div} {...defaultAnimate}>
         <Stack gap={2}>
           <Typography textAlign="center" variant="h5">
-            Bitcoin Currency Price: BTC/USDT
+            MVPX Currency Price: USD
           </Typography>
           <CoinPriceChart />
         </Stack>

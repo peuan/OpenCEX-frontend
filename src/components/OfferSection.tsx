@@ -1,7 +1,14 @@
-"use client"
-import { Avatar, Box, Container, Grid2, Stack, Typography } from "@mui/material"
-import { motion } from "framer-motion"
-import { defaultAnimate, imageAnimate } from "~/constants/animate.constant"
+"use client";
+import {
+  Avatar,
+  Box,
+  Container,
+  Grid2,
+  Stack,
+  Typography,
+} from "@mui/material";
+import { motion } from "framer-motion";
+import { defaultAnimate, imageAnimate } from "~/constants/animate.constant";
 
 const offers = [
   {
@@ -19,7 +26,7 @@ const offers = [
     title: "24/7 Support",
     description: "Instant, friendly and always ready to help.",
   },
-]
+];
 
 const OfferSection = () => {
   return (
@@ -59,15 +66,17 @@ const OfferSection = () => {
                   }}
                 >
                   <Typography variant="h4">{offer.title}</Typography>
-                  <Typography>{offer.description}</Typography>
+                  <Typography sx={{ textAlign: "center" }}>
+                    {offer.description}
+                  </Typography>
                 </Box>
               </Stack>
             </Grid2>
-          )
+          );
         })}
       </Grid2>
     </Container>
-  )
-}
+  );
+};
 
-export default OfferSection
+export default OfferSection;

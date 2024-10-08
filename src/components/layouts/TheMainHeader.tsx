@@ -111,7 +111,7 @@ const TheMainHeader = () => {
           <Stack alignItems="center">
             <NextLink href="/">
               <Avatar
-                sx={{ width: 180, height: 50 }}
+                sx={{ width: 180, height: 40 }}
                 variant="square"
                 src="/logo.svg"
               />
