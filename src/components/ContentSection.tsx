@@ -123,18 +123,19 @@ const ContentSection: React.FC = () => {
             paddingBottom: "1rem",
           }}
         >
-          User-friendly and fast interface
+          Flexible loyalty solutions for your members
         </Typography>
         <Typography
           variant="h5"
           sx={{
             paddingBottom: "2rem",
             color: "text.primary",
-            fontSize: { xs: "1.2rem", md: "1.5rem" },
+            fontSize: { xs: "1.2rem", md: "1.4rem" },
           }}
         >
-          Trading crypto has never been so easy and convenient. Smooth interface
-          giving you the best experience.
+          Our suite of solutions create new revenue streams for loyalty brands
+          across airline, travel, hotel, retail and financial, enabling your
+          members to do more with your points/miles.
         </Typography>
 
         <List>
@@ -143,8 +144,9 @@ const ContentSection: React.FC = () => {
               <CheckCircleIcon sx={{ color: "primary.main" }} />
             </ListItemIcon>
             <ListItemText
-              primary="View real-time cryptocurrency prices"
-              secondary="Experience A Variety Of Trading On Bitcost. You Can Use Various Types Of Coin Transactions."
+              primary="View real-time loyalty point conversion prices"
+              secondary="Experience A Variety Of Loyalty Point Trading On MVP EX. 
+You Can Use Various Types Of Point Transactions."
             />
           </ListItem>
           <ListItem>
@@ -152,8 +154,9 @@ const ContentSection: React.FC = () => {
               <CheckCircleIcon sx={{ color: "primary.main" }} />
             </ListItemIcon>
             <ListItemText
-              primary="Buy and sell BTC, ETH, XRP, OKB, etc..."
-              secondary="Experience A Variety Of Trading On Bitcost. You Can Use Various Types Of Coin Transactions."
+              primary="Buy and sell your favourite loyalty point to maximise your loyalty membership journey"
+              secondary="Experience A Variety Of Loyalty Point Trading On MVP EX. 
+You Can Use Various Types Of Point Transactions."
             />
           </ListItem>
         </List>

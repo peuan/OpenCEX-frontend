@@ -3,7 +3,7 @@ import { Box, Typography, Button } from "@mui/material"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import PaidIcon from "@mui/icons-material/Paid"
-import Banner from "../../public/images/banner-2.png"
+import Banner from "../../public/images/banner-3.png"
 import { imageAnimate } from "~/constants/animate.constant"
 
 const HeroSection = () => {
@@ -37,7 +37,7 @@ const HeroSection = () => {
             fontSize: { xs: "2rem", md: "5rem" },
           }}
         >
-          Start Your Crypto Business
+          Driving Growth for Your Loyalty Program
         </Typography>
         <Typography
           variant="h5"
@@ -47,7 +47,8 @@ const HeroSection = () => {
             fontSize: { xs: "1.2rem", md: "1.5rem" },
           }}
         >
-          Trade crypto in the easiest and safest way!
+          We help loyalty programs build, power, and grow their best loyalty
+          experience.
         </Typography>
         <Typography
           variant="body1"
@@ -59,7 +60,7 @@ const HeroSection = () => {
             justifyContent: { xs: "center", md: "flex-start" },
           }}
         >
-          <PaidIcon sx={{ marginRight: "0.5rem" }} /> BTC Price: 65175.43 USDT
+          <PaidIcon sx={{ marginRight: "0.5rem" }} /> MVPX Price: 65175.43 USDT
         </Typography>
         <Button
           variant="contained"
@@ -70,7 +71,7 @@ const HeroSection = () => {
             fontWeight: "bold",
           }}
         >
-          Trade Bitcoin Now
+          Trade Loyalty Points Now
         </Button>
       </Box>
 
